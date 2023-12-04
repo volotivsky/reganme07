@@ -10,7 +10,7 @@ const Favorite = () => {
     });
     useEffect(()=>{
         const func = async ()=>{
-            await axios.get('https://reganme07.onrender.com/favorite')
+            await axios.get('https://reganme07-api.onrender.com/favorite')
             .then(({data})=>{
                 setposts(data)
                 console.log(data)
@@ -24,7 +24,7 @@ const Favorite = () => {
             const obj = {
                 favorite: el.target.name
             }
-            await axios.patch("https://reganme07.onrender.com/favorite", obj)
+            await axios.patch("https://reganme07-api.onrender.com/favorite", obj)
             .then(({data})=>{
                 console.log(data)
                 el.target.style.backgroundColor=data
