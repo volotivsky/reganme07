@@ -16,7 +16,7 @@ const Home = () => {
     });
     useEffect(()=>{
         try{
-            axios.get('https://reganme07.onrender.com/auth')
+            axios.get('https://reganme07-api.onrender.com/auth')
             .then(({data})=>{
                 setdata(data)
             })
