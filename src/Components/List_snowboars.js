@@ -6,7 +6,7 @@ const List_snowboars = () => {
     const [smalllist, setsmalllist] = useState([])
     const token = window.localStorage.getItem('token')
     useEffect(()=>{
-        axios.get("https://reganme07.onrender.com/posts")
+        axios.get("https://reganme07-api.onrender.com/posts")
         .then(({data})=>{
             setposts(data)
             const a = [data[1],data[2], data[3], data[0], data[4], data[5]]
@@ -18,7 +18,7 @@ const List_snowboars = () => {
             const obj = {
                 favorite: el.target.name
             }
-            await axios.patch("https://reganme07.onrender.com/favorite", obj)
+            await axios.patch("https://reganme07-api.onrender.com/favorite", obj)
             .then(({data})=>{
                 console.log(data)
                 el.target.style.backgroundColor=data
