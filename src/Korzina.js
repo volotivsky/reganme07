@@ -11,7 +11,7 @@ const Korzina = () => {
     });
     useEffect(()=>{
         const func = async ()=>{
-            await axios.get('https://reganme07.onrender.com/korzina')
+            await axios.get('https://reganme07-api.onrender.com/korzina')
             .then(({data})=>{
                 setposts(data)
             })
