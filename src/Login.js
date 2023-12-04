@@ -18,7 +18,7 @@ const Login = () => {
     }
     const login = async()=>{
         try{
-            await axios.post('https://reganme07.onrender.com/login', val)
+            await axios.post('https://reganme07-api.onrender.com/login', val)
             .then(({data})=>{
                 console.log(data)
                 window.localStorage.setItem('token', data)
@@ -35,7 +35,7 @@ const Login = () => {
     }
     const register = async()=>{
         try{
-            await axios.post('https://reganme07.onrender.com/register', val2)
+            await axios.post('https://reganme07-api.onrender.com/register', val2)
             .then(({data})=>{
                 console.log(data)
                 alert('регистрация успешна, а теперь войдите')
