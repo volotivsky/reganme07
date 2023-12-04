@@ -18,15 +18,15 @@ const Create = () => {
             const formData = new FormData()
             const file = el.target.files[0]
             formData.append('image', file)
-            const {data}= await axios.post('https://reganme07.onrender.com/upload', formData)
-            setval((x)=>({...x, [el.target.name]:`https://reganme07.onrender.com${data.url}`}))
+            const {data}= await axios.post('https://reganme07-api.onrender.com/upload', formData)
+            setval((x)=>({...x, [el.target.name]:`https://reganme07-api.onrender.com${data.url}`}))
         }catch(err){
             console.log(err)
         }
     }
     const sendPost = async()=>{
         try{
-            await axios.post('https://reganme07.onrender.com/posts', val)
+            await axios.post('https://reganme07-api.onrender.com/posts', val)
         }catch(err){
             console.log(err.response)
         }
