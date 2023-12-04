@@ -15,7 +15,7 @@ const Allposts = () => {
         el.target.checked==true?setposts(posts.filter((x)=>x.size==el.target.name)):setposts(constpost)
     }
     useEffect(()=>{
-        axios.get('https://reganme07.onrender.com/posts')
+        axios.get('https://reganme07-api.onrender.com/posts')
         .then(({data})=>{
             setposts(data)
             setconstpost(data)
@@ -26,7 +26,7 @@ const Allposts = () => {
             const obj = {
                 favorite: el.target.name
             }
-            await axios.patch("https://reganme07.onrender.com/favorite", obj)
+            await axios.patch("https://reganme07-api.onrender.com/favorite", obj)
             .then(({data})=>{
                 console.log(data)
                 el.target.style.backgroundColor=data
