@@ -27,14 +27,11 @@ const Post = () => {
     })
     useEffect(()=>{
         try{
-            const a = ()=>{
-                axios.get('https://reganme07-api.onrender.com'+window.location.pathname)
-                .then(({data})=>{
-                    setpost(data)
-                    setpostid({korzina: data._id})
-                })
-            }
-            a()
+            axios.get('https://reganme07-api.onrender.com'+window.location.pathname)
+            .then(({data})=>{
+                setpost(data)
+                setpostid({korzina: data._id})
+            })
             console.log(post)
         }catch(err){
             console.log(err)
