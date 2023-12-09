@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import Header_top from './Components/Header_top';
-import Tags from './Components/Tags';
-import img1 from './Components/img/Снимок экрана 2023-11-30 132256.png'
+import Header_top from './Header_top';
+import Tags from './Tags';
+import img1 from './img/Снимок экрана 2023-11-30 132256.png'
 const Aboutpost = () => {
     axios.interceptors.request.use(function (config) {
         const token = window.localStorage.getItem('token')
