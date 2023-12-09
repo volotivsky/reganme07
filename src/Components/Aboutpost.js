@@ -27,15 +27,11 @@ const Aboutpost = () => {
     })
     useEffect(()=>{
         try{
-            const a = async()=>{
-                await axios.get('https://reganme07.onrender.com'+window.location.pathname)
-                .then(({data})=>{
-                    setpost(data)
-                    setpostid({korzina: data._id})
-                })
-            }
-            a()
-            console.log(post)
+            await axios.get('https://reganme07.onrender.com'+window.location.pathname)
+            .then(({data})=>{
+                etpost(data)
+                setpostid({korzina: data._id})
+            })
         }catch(err){
             console.log(err)
         }
