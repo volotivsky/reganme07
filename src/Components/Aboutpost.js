@@ -29,7 +29,7 @@ const Aboutpost = () => {
         try{
             axios.get('https://reganme07.onrender.com'+window.location.pathname)
             .then(({data})=>{
-                etpost(data)
+                setpost(data)
                 setpostid({korzina: data._id})
             })
         }catch(err){
