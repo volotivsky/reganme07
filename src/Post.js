@@ -3,7 +3,7 @@ import Aboutpost from './Components/Aboutpost';
 const Post = () => {
     return (
         <div>
-            <Aboutpost/>
+            <Aboutpost></Aboutpost>
         </div>
     );
 };
