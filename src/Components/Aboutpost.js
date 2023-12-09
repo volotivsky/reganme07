@@ -27,7 +27,7 @@ const Aboutpost = () => {
     })
     useEffect(()=>{
         try{
-            await axios.get('https://reganme07.onrender.com'+window.location.pathname)
+            axios.get('https://reganme07.onrender.com'+window.location.pathname)
             .then(({data})=>{
                 etpost(data)
                 setpostid({korzina: data._id})
