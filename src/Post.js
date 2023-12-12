@@ -28,7 +28,7 @@ const Post = () => {
     useEffect(()=>{
         try{
             const a = async()=>{
-                await axios.get('https://reganme07.onrender.com'+window.location.pathname)
+                await axios.get('https://reganme07-api.onrender.com'+window.location.pathname)
                 .then(({data})=>{
                     setpost(data)
                     setpostid({korzina: data._id})
